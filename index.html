@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Daily Insight — Latest News</title>
+<meta name="description" content="The Daily Insight — latest national, technology, business and mobility news.">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">THE DAILY <span>INSIGHT</span></a>
+    <div class="nav-actions">
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☾</button>
+      <a class="admin-link" href="admin.html">Admin</a>
+    </div>
+  </div>
+</header>
+
+<div class="ticker"><div class="wrap"><strong>BREAKING</strong><span id="tickerText">Latest updates from The Daily Insight</span></div></div>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Independent • Fast • Insightful</p>
+    <h1>आज की बड़ी खबरें, एक साफ नज़र के साथ.</h1>
+    <p class="lead">National, technology, business और mobility से जुड़ी चुनिंदा खबरें.</p>
+    <div class="controls">
+      <input id="search" type="search" placeholder="खबर खोजें…" aria-label="Search news">
+      <select id="category" aria-label="Filter by category">
+        <option value="all">सभी श्रेणियाँ</option>
+        <option>National</option><option>Technology</option><option>Business</option><option>Mobility</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Latest News</h2><span id="count"></span></div>
+    <div id="newsGrid" class="grid"></div>
+    <p id="empty" class="empty hidden">कोई खबर नहीं मिली.</p>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="year"></span> The Daily Insight</div></footer>
+<script src="app.js"></script>
+</body>
+</html>

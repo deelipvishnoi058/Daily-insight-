@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — The Daily Insight</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap nav">
+<a class="brand" href="index.html">THE DAILY <span>INSIGHT</span></a>
+<a href="index.html">View site</a>
+</div></header>
+<main class="wrap admin-page">
+<h1>Free News Manager</h1>
+<div class="notice">
+<strong>ध्यान दें:</strong> यह 100% free, browser-based manager है। इसमें खबरें आपके device/browser में सुरक्षित रहती हैं।
+Live website पर automatically publish करने के लिए GitHub में <code>news.json</code> update करना होगा।
+</div>
+
+<section class="panel">
+<h2>1. नई खबर बनाएं</h2>
+<form id="newsForm">
+<input id="title" placeholder="Headline" required>
+<select id="newsCategory"><option>National</option><option>Technology</option><option>Business</option><option>Mobility</option></select>
+<input id="image" type="url" placeholder="Image URL">
+<textarea id="summary" placeholder="Short summary" required></textarea>
+<textarea id="content" placeholder="Full article content" required></textarea>
+<button type="submit">Add to local list</button>
+</form>
+</section>
+
+<section class="panel">
+<h2>2. Backup / Restore</h2>
+<button id="downloadBtn">Download JSON Backup</button>
+<label class="secondary" style="display:inline-block;padding:12px;border-radius:10px;cursor:pointer">
+Restore JSON <input id="restore" type="file" accept=".json" hidden>
+</label>
+<button id="clearBtn" class="secondary">Clear Local News</button>
+<p id="msg"></p>
+</section>
+
+<section class="panel">
+<h2>3. GitHub publish</h2>
+<p>Backup डाउनलोड करें, फिर GitHub में <code>news.json</code> की contents replace करके Commit changes करें। Website नया data दिखाएगी।</p>
+<p><strong>Security:</strong> GitHub token/password इस page में कभी नहीं डालना है.</p>
+</section>
+
+<section class="panel"><h2>Local news</h2><div id="adminList"></div></section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

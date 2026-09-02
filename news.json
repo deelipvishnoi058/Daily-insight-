@@ -1,0 +1,11 @@
+[
+  {
+    "id": "demo-1",
+    "title": "The Daily Insight में आपका स्वागत है",
+    "category": "National",
+    "summary": "यह शुरुआती demo story है। GitHub में news.json बदलकर अपनी खबरें प्रकाशित करें।",
+    "content": "यह demo content है। अपनी वास्तविक खबर का पूरा article content यहाँ रखें।",
+    "image": "",
+    "published_at": "2026-09-02T00:00:00.000Z"
+  }
+]
