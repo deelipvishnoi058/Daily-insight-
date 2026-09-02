@@ -1,12 +1,5 @@
-<!doctype html>
-<html lang="hi">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Article | The Daily Insight</title><meta name="description" content="The Daily Insight article">
-<link rel="stylesheet" href="styles.css"></head>
-<body>
-<header class="masthead"><div class="wrap mast-in"><a class="logo" href="index.html"><span>THE DAILY</span><b>INSIGHT</b></a><a href="index.html" class="back">← सभी खबरें</a></div></header>
-<div class="breaking"><div class="wrap breaking-in"><span class="breaking-label">THE DAILY INSIGHT</span><div>Independent • Fast • Insightful</div></div></div>
-<main class="wrap article-page" id="article"></main>
-<footer><div class="wrap copyright">© <span id="year"></span> The Daily Insight</div></footer>
-<script src="app.js"></script>
-</body></html>
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Article — The Daily Insight</title><style>
+body{margin:0;background:#f6f7f9;color:#111827;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}.wrap{width:min(900px,92%);margin:auto}.head{background:#0b1020;color:#fff;padding:20px 0}.head a{color:#fff;text-decoration:none;font-weight:800}.article{background:#fff;margin:30px auto 60px;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden}.article img{width:100%;max-height:520px;object-fit:cover}.body{padding:28px}.cat{color:#e11d2e;font-size:11px;font-weight:900;letter-spacing:.1em}.body h1{font-family:Georgia,serif;font-size:clamp(34px,6vw,58px);line-height:1.05;margin:9px 0 15px}.meta{color:#667085;font-size:12px}.content{font-size:18px;line-height:1.85;white-space:pre-wrap;margin-top:25px}footer{background:#080c16;color:#aab2c2;padding:25px 0;text-align:center;font-size:12px}</style></head><body><header class="head"><div class="wrap"><a href="index.html">← THE DAILY INSIGHT</a></div></header><main class="wrap article" id="article"></main><footer>© <span id="y"></span> The Daily Insight</footer><script>
+const demo=[{id:"1",category:"National",title:"The Daily Insight में आपका स्वागत है",summary:"भारत और दुनिया की जरूरी खबरों को साफ, तेज और भरोसेमंद अंदाज़ में पढ़िए।",content:"The Daily Insight पर आपका स्वागत है। यह demo article है जिसे आप अपनी वास्तविक खबर से बदल सकते हैं।",image:"https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1400&q=85"},{id:"2",category:"Technology",title:"Technology की दुनिया में तेजी से बदलता landscape",summary:"नई technology, innovation और digital दुनिया से जुड़ी अहम updates पर एक नजर।",content:"यह technology article का demo है।",image:"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85"}];
+const id=new URLSearchParams(location.search).get("id"),n=demo.find(x=>x.id===id)||demo[0];document.title=n.title+" — The Daily Insight";document.querySelector("#article").innerHTML=`<img src="${n.image}" alt=""><div class="body"><span class="cat">${n.category}</span><h1>${n.title}</h1><div class="meta">The Daily Insight · आज</div><div class="content">${n.content}</div></div>`;document.querySelector("#y").textContent=new Date().getFullYear();
+</script></body></html>

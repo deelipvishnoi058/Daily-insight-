@@ -2,85 +2,72 @@
 <html lang="hi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The Daily Insight | News & Analysis</title>
-<meta name="description" content="The Daily Insight — भारत और दुनिया की ताज़ा खबरें, technology, business और mobility updates.">
-<meta name="theme-color" content="#0b1220">
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Daily Insight — ताज़ा खबरें और गहरी नज़र</title>
+<meta name="description" content="The Daily Insight — National, Technology, Business और Mobility की ताज़ा खबरें।">
+<meta name="theme-color" content="#0b1020">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#111827;--muted:#667085;--line:#e5e7eb;--navy:#0b1020;--red:#e11d2e;--red2:#b91c2c;--gold:#d4a72c;--shadow:0 12px 35px #10182812}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans Devanagari","Segoe UI",sans-serif}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+.utility{background:#080c16;color:#aab2c2;font-size:12px}.utility .wrap{height:34px;display:flex;justify-content:space-between;align-items:center}.utility b{color:#fff}
+.header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.head{height:76px;display:flex;align-items:center;gap:25px}.brand{display:flex;align-items:center;gap:11px;min-width:220px}.brandmark{width:42px;height:42px;border-radius:10px;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:950;font-size:18px;box-shadow:0 6px 18px #e11d2e38}.brandtext small{display:block;font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--muted)}.brandtext strong{display:block;font-family:Georgia,serif;font-size:22px;line-height:1}
+.nav{display:flex;gap:22px;align-items:center;flex:1}.nav a{font-size:14px;font-weight:750}.nav a:hover{color:var(--red)}.actions{display:flex;gap:8px;align-items:center}.icon{width:39px;height:39px;border:1px solid var(--line);border-radius:9px;background:#fff;display:grid;place-items:center}.admin{background:var(--navy);color:#fff;padding:10px 14px;border-radius:9px;font-size:13px;font-weight:800}.menu{display:none}
+.breaking{background:#fff;border-bottom:1px solid var(--line)}.breaking .wrap{height:42px;display:flex;align-items:center;gap:12px;overflow:hidden}.badge{background:var(--red);color:#fff;border-radius:4px;padding:6px 9px;font-size:10px;font-weight:950;letter-spacing:.06em;white-space:nowrap}.ticker{font-size:13px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero{padding:28px 0 20px}.hero-grid{display:grid;grid-template-columns:1.6fr .9fr;gap:18px}.lead{background:#111827;color:#fff;border-radius:16px;overflow:hidden;position:relative;min-height:470px;box-shadow:var(--shadow)}.lead img{width:100%;height:100%;min-height:470px;object-fit:cover;opacity:.67}.lead:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#080c16)}.lead-body{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:28px}.eyebrow{font-size:11px;font-weight:950;letter-spacing:.13em;color:#e7b7bc}.lead h1{font-family:Georgia,serif;font-size:clamp(31px,4.2vw,51px);line-height:1.05;margin:9px 0 12px;max-width:760px}.lead p{color:#d7dbe3;margin:0;max-width:650px;line-height:1.55}.readbtn{display:inline-flex;margin-top:17px;background:#fff;color:#111827;padding:10px 15px;border-radius:8px;font-size:13px;font-weight:850}
+.side{display:grid;gap:18px}.sidecard{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:145px 1fr;min-height:150px}.sidecard img{width:145px;height:100%;min-height:150px;object-fit:cover}.sidebody{padding:17px}.sidebody h3{font-family:Georgia,serif;font-size:20px;line-height:1.15;margin:7px 0}.sidebody p{font-size:12px;color:var(--muted);margin:0;line-height:1.5}
+.section{padding:12px 0 45px}.sectionhead{display:flex;justify-content:space-between;align-items:end;border-bottom:2px solid var(--navy);padding-bottom:10px;margin-bottom:16px}.sectionhead h2{font-family:Georgia,serif;font-size:29px;margin:3px 0 0}.sectionhead span{font-size:12px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:1fr 310px;gap:30px}.tools{display:flex;gap:10px;margin-bottom:18px}.search{background:#fff;border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;flex:1;padding:0 12px}.search input{border:0;outline:0;background:none;width:100%;padding:12px 8px;font:inherit;font-size:14px}.tools select{border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 13px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;box-shadow:0 2px 10px #10182806}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.card img{display:block;width:100%;height:215px;object-fit:cover}.cardbody{padding:17px}.cat{font-size:10px;color:var(--red);font-weight:950;letter-spacing:.11em}.card h3{font-family:Georgia,serif;font-size:21px;line-height:1.18;margin:7px 0}.card p{font-size:13px;color:var(--muted);line-height:1.55;margin:8px 0}.arrow{font-size:12px;font-weight:900}
+.sidebarbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}.side-title{font-family:Georgia,serif;font-size:23px;margin:3px 0 10px}.trend{display:grid;grid-template-columns:38px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}.trend:last-child{border:0}.num{font-size:23px;font-weight:950;color:#d0d4dc}.trend h4{font-size:14px;line-height:1.3;margin:0}.trend small{font-size:10px;color:var(--muted)}.brief{background:var(--navy);color:#fff}.brief p{color:#b9c0cc;font-size:13px;line-height:1.5}.brief input{width:100%;padding:11px;border:0;border-radius:8px;margin-bottom:8px}.brief button{width:100%;padding:11px;border:0;border-radius:8px;background:var(--red);color:#fff;font-weight:850}
+.footer{background:#080c16;color:#aab2c2;padding:42px 0 0}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footgrid h4{color:#fff;margin:0 0 10px}.footgrid a{display:block;font-size:13px;margin:8px 0}.footbrand{color:#fff;font-family:Georgia,serif;font-size:24px}.copyright{border-top:1px solid #1e2635;margin-top:32px;padding:17px 0;font-size:11px}
+@media(max-width:900px){.nav{display:none}.menu{display:grid}.hero-grid,.layout{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr}.sidebar{display:none}.lead,.lead img{min-height:410px}.brand{min-width:0}.brandtext strong{font-size:20px}}
+@media(max-width:600px){.utility{display:none}.head{height:64px;gap:9px}.brandmark{width:36px;height:36px}.brandtext small{font-size:8px}.brandtext strong{font-size:17px}.actions{margin-left:auto}.icon{width:35px;height:35px}.admin{padding:9px 10px;font-size:11px}.menu{order:-1}.breaking .wrap{height:38px}.hero{padding-top:14px}.hero-grid{gap:12px}.lead,.lead img{min-height:360px}.lead-body{padding:19px}.lead h1{font-size:29px}.lead p{font-size:12px}.side{grid-template-columns:1fr}.sidecard{grid-template-columns:105px 1fr}.sidecard img{width:105px;min-height:120px}.sidebody{padding:13px}.sidebody h3{font-size:17px}.grid{grid-template-columns:1fr}.card img{height:220px}.tools{flex-direction:column}.tools select{height:44px}.sectionhead h2{font-size:25px}.footgrid{grid-template-columns:1fr 1fr}.footgrid>div:first-child{grid-column:1/-1}}
+</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="wrap topbar-in">
-    <div class="date" id="today"></div>
-    <div class="toplinks"><span>Independent News</span><span>•</span><span>Fact First</span></div>
-  </div>
-</header>
+<div class="utility"><div class="wrap"><span><b>THE DAILY INSIGHT</b> &nbsp;|&nbsp; Independent News</span><span id="date"></span></div></div>
+<header class="header"><div class="wrap head">
+<button class="icon menu" id="menu" aria-label="menu">☰</button>
+<a class="brand" href="index.html"><span class="brandmark">DI</span><span class="brandtext"><small>THE DAILY</small><strong>INSIGHT</strong></span></a>
+<nav class="nav" id="nav"><a href="#latest">Latest</a><a href="#" data-cat="National">National</a><a href="#" data-cat="Technology">Technology</a><a href="#" data-cat="Business">Business</a><a href="#" data-cat="Mobility">Mobility</a></nav>
+<div class="actions"><button class="icon" id="theme">☾</button><a class="admin" href="admin.html">Admin</a></div>
+</div></header>
+<div class="breaking"><div class="wrap"><span class="badge">BREAKING</span><div class="ticker" id="ticker">The Daily Insight — ताज़ा updates</div></div></div>
 
-<header class="masthead">
-  <div class="wrap mast-in">
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-    <a class="logo" href="index.html"><span>THE DAILY</span><b>INSIGHT</b></a>
-    <div class="mast-actions">
-      <button id="themeBtn" class="round-btn" aria-label="Toggle theme">☾</button>
-      <a class="admin-pill" href="admin.html">Admin</a>
-    </div>
-  </div>
-</header>
-
-<nav class="mainnav" id="mainnav">
-  <div class="wrap nav-scroll">
-    <a href="#" data-cat="all">Home</a>
-    <a href="#" data-cat="National">National</a>
-    <a href="#" data-cat="Technology">Technology</a>
-    <a href="#" data-cat="Business">Business</a>
-    <a href="#" data-cat="Mobility">Mobility</a>
-  </div>
-</nav>
-
-<div class="breaking">
-  <div class="wrap breaking-in"><span class="breaking-label">BREAKING</span><div class="breaking-track" id="ticker">The Daily Insight — latest updates</div></div>
-</div>
-
-<main class="wrap">
-  <section class="hero-grid">
-    <article class="lead-story" id="leadStory"></article>
-    <div class="side-stories" id="sideStories"></div>
-  </section>
-
-  <section class="content-layout">
-    <div class="main-column">
-      <div class="section-title"><div><span class="kicker">LATEST</span><h2>ताज़ा खबरें</h2></div><span id="count"></span></div>
-      <div class="controls">
-        <div class="searchbox">⌕<input id="search" type="search" placeholder="खबर, विषय या headline खोजें…"></div>
-        <select id="category"><option value="all">सभी श्रेणियाँ</option><option>National</option><option>Technology</option><option>Business</option><option>Mobility</option></select>
-      </div>
-      <div id="newsGrid" class="news-grid"></div>
-      <p id="empty" class="empty hidden">इस category में अभी कोई खबर नहीं मिली।</p>
-    </div>
-
-    <aside class="sidebar">
-      <div class="side-title"><span class="kicker">TRENDING</span><h2>लोकप्रिय खबरें</h2></div>
-      <div id="trending"></div>
-      <div class="newsletter">
-        <span class="kicker">DAILY BRIEF</span>
-        <h3>दिन की बड़ी खबरें सीधे आपके inbox में.</h3>
-        <p>महत्वपूर्ण updates, बिना शोर के।</p>
-        <form id="newsletter"><input type="email" placeholder="आपका email" required><button>Subscribe</button></form>
-      </div>
-    </aside>
-  </section>
+<main>
+<section class="hero wrap"><div class="hero-grid"><article class="lead" id="lead"></article><div class="side" id="side"></div></div></section>
+<section class="section wrap" id="latest"><div class="layout"><div>
+<div class="sectionhead"><div><span class="cat">NEWS DESK</span><h2>ताज़ा खबरें</h2></div><span id="count"></span></div>
+<div class="tools"><div class="search">⌕<input id="search" placeholder="खबर, विषय या headline खोजें…"></div><select id="category"><option value="all">सभी श्रेणियाँ</option><option>National</option><option>Technology</option><option>Business</option><option>Mobility</option></select></div>
+<div class="grid" id="grid"></div><p id="empty" style="display:none;text-align:center;color:#667085;padding:35px">कोई खबर नहीं मिली।</p>
+</div><aside class="sidebar"><div class="sidebarbox"><span class="cat">TRENDING</span><h3 class="side-title">लोकप्रिय खबरें</h3><div id="trending"></div></div><div class="sidebarbox brief"><span class="cat">DAILY BRIEF</span><h3 class="side-title">दिन की बड़ी खबरें, सीधे inbox में.</h3><p>महत्वपूर्ण updates. बिना शोर के.</p><form id="form"><input type="email" placeholder="आपका email" required><button>Subscribe</button></form></div></aside></div></section>
 </main>
+<footer class="footer"><div class="wrap footgrid"><div><div class="footbrand">THE DAILY INSIGHT</div><p>Independent • Fast • Insightful</p></div><div><h4>Sections</h4><a>National</a><a>Technology</a><a>Business</a><a>Mobility</a></div><div><h4>Company</h4><a>About us</a><a>Contact</a><a>Privacy</a></div></div><div class="wrap copyright">© <span id="year"></span> The Daily Insight. All rights reserved.</div></footer>
 
-<footer>
-  <div class="wrap footer-grid">
-    <div><a class="logo footer-logo" href="index.html"><span>THE DAILY</span><b>INSIGHT</b></a><p>Independent • Fast • Insightful</p></div>
-    <div><strong>Sections</strong><a href="#">National</a><a href="#">Technology</a><a href="#">Business</a><a href="#">Mobility</a></div>
-    <div><strong>About</strong><a href="#">About us</a><a href="#">Contact</a><a href="#">Privacy</a></div>
-  </div>
-  <div class="wrap copyright">© <span id="year"></span> The Daily Insight. All rights reserved.</div>
-</footer>
-
-<script src="app.js"></script>
-</body>
-</html>
+<script>
+const demo=[
+{id:"1",category:"National",title:"The Daily Insight में आपका स्वागत है",summary:"भारत और दुनिया की जरूरी खबरों को साफ, तेज और भरोसेमंद अंदाज़ में पढ़िए।",content:"The Daily Insight पर आपका स्वागत है। यह demo article है जिसे आप अपनी वास्तविक खबर से बदल सकते हैं।",image:"https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1400&q=85"},
+{id:"2",category:"Technology",title:"Technology की दुनिया में तेजी से बदलता landscape",summary:"नई technology, innovation और digital दुनिया से जुड़ी अहम updates पर एक नजर।",content:"यह technology article का demo है।",image:"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85"},
+{id:"3",category:"Business",title:"Business और बाजार में आज के बड़े बदलाव",summary:"Economy, business और market से जुड़ी जरूरी खबरें एक जगह।",content:"यह business article का demo है।",image:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"},
+{id:"4",category:"Mobility",title:"Electric Mobility: बदल रही है आने वाले कल की सवारी",summary:"EV, charging और mobility sector में हो रहे बदलावों पर खास नजर।",content:"यह mobility article का demo है।",image:"https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=85"}
+];
+let data=demo;
+const $=s=>document.querySelector(s), esc=x=>String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+function card(n){return `<article class="card"><img src="${esc(n.image)}" alt=""><div class="cardbody"><span class="cat">${esc(n.category)}</span><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p><a class="arrow" href="article.html?id=${n.id}">पूरी खबर पढ़ें →</a></div></article>`}
+function render(){
+ const q=($("#search").value||"").toLowerCase(), c=$("#category").value;
+ const a=data.filter(n=>(c==="all"||n.category===c)&&(`${n.title} ${n.summary}`.toLowerCase().includes(q)));
+ $("#count").textContent=a.length+" stories";$("#empty").style.display=a.length?"none":"block";$("#grid").innerHTML=a.map(card).join("");
+ const lead=data[0];$("#lead").innerHTML=`<img src="${lead.image}" alt=""><div class="lead-body"><span class="eyebrow">${lead.category.toUpperCase()} • FEATURED</span><h1>${esc(lead.title)}</h1><p>${esc(lead.summary)}</p><a class="readbtn" href="article.html?id=${lead.id}">पूरी खबर पढ़ें →</a></div>`;
+ $("#side").innerHTML=data.slice(1,3).map(n=>`<a class="sidecard" href="article.html?id=${n.id}"><img src="${n.image}" alt=""><div class="sidebody"><span class="cat">${n.category}</span><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p></div></a>`).join("");
+ $("#trending").innerHTML=data.map((n,i)=>`<a class="trend" href="article.html?id=${n.id}"><span class="num">0${i+1}</span><span><h4>${esc(n.title)}</h4><small>${n.category}</small></span></a>`).join("");
+ $("#ticker").textContent=data.slice(0,3).map(n=>n.title).join("  •  ");
+}
+$("#search").oninput=render;$("#category").onchange=render;
+document.querySelectorAll("[data-cat]").forEach(x=>x.onclick=e=>{e.preventDefault();$("#category").value=x.dataset.cat;render();location.hash="latest"});
+$("#menu").onclick=()=>$("#nav").classList.toggle("open");
+$("#theme").onclick=()=>{document.body.classList.toggle("dark");alert("Dark mode demo: full dark theme next step me polish karenge.")};
+$("#form").onsubmit=e=>{e.preventDefault();alert("Newsletter signup backend integration ke liye ready hai.");e.target.reset()};
+$("#date").textContent=new Date().toLocaleDateString("hi-IN",{day:"numeric",month:"long",year:"numeric"});$("#year").textContent=new Date().getFullYear();render();
+</script>
+</body></html>

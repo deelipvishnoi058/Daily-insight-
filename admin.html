@@ -1,29 +1,4 @@
-<!doctype html>
-<html lang="hi">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin | The Daily Insight</title><link rel="stylesheet" href="styles.css"></head>
-<body>
-<header class="masthead"><div class="wrap mast-in"><a class="logo" href="index.html"><span>THE DAILY</span><b>INSIGHT</b></a><a href="index.html" class="back">View Website</a></div></header>
-<main class="wrap admin-page">
-<div class="admin-head"><div><span class="kicker">CONTENT STUDIO</span><h1>News Manager</h1><p>खबर तैयार करें, backup रखें और फिर GitHub पर publish करें।</p></div></div>
-<div class="notice"><strong>100% Free Mode:</strong> यह manager browser में local news रखता है। Live site पर publish करने के लिए <code>news.json</code> को GitHub में update करना होगा। GitHub token यहाँ कभी न डालें।</div>
-<section class="panel">
-<h2>नई खबर</h2>
-<form id="newsForm" class="editor-grid">
-<input id="title" placeholder="Headline" required>
-<select id="newsCategory"><option>National</option><option>Technology</option><option>Business</option><option>Mobility</option></select>
-<input id="image" type="url" placeholder="Image URL">
-<textarea id="summary" placeholder="Short summary" required></textarea>
-<textarea id="content" placeholder="Full article content" required></textarea>
-<button type="submit">＋ Add News</button>
-</form>
-</section>
-<section class="panel">
-<h2>Backup & Publish</h2>
-<div class="admin-actions"><button id="downloadBtn">Download news.json</button><label class="file-btn">Restore JSON<input id="restore" type="file" accept=".json"></label><button id="clearBtn" class="secondary">Clear Local</button></div>
-<p id="msg"></p>
-</section>
-<section class="panel"><h2>Local News</h2><div id="adminList"></div></section>
-</main>
-<script src="admin.js"></script>
-</body></html>
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin — The Daily Insight</title><style>
+body{margin:0;background:#f6f7f9;color:#111827;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}.wrap{width:min(1000px,92%);margin:auto}.head{background:#0b1020;color:#fff;padding:20px 0}.head a{color:#fff;text-decoration:none}.panel{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:22px;margin:24px 0}.grid{display:grid;gap:10px}input,select,textarea,button{font:inherit;padding:12px;border:1px solid #e5e7eb;border-radius:8px}textarea{min-height:150px}button{background:#0b1020;color:#fff;font-weight:800}.note{padding:13px;background:#fff7f7;border-left:4px solid #e11d2e}.item{padding:12px 0;border-bottom:1px solid #eee}h1{font-family:Georgia,serif}</style></head><body><header class="head"><div class="wrap"><a href="index.html">← THE DAILY INSIGHT</a></div></header><main class="wrap"><h1>News Manager</h1><div class="note"><b>Free GitHub version:</b> यह admin demo browser में data बनाता है। Live publishing के लिए generated <code>news.json</code> को GitHub में upload/replace करना होगा।</div><section class="panel"><h2>नई खबर</h2><form id="f" class="grid"><input id="t" placeholder="Headline" required><select id="c"><option>National</option><option>Technology</option><option>Business</option><option>Mobility</option></select><input id="i" placeholder="Image URL"><textarea id="s" placeholder="Short summary" required></textarea><textarea id="x" placeholder="Full article" required></textarea><button>＋ Add News</button></form></section><section class="panel"><h2>Local News</h2><div id="list"></div></section></main><script>
+let a=JSON.parse(localStorage.getItem("tdi_local")||"[]");const $=s=>document.querySelector(s);function r(){$("#list").innerHTML=a.length?a.map(n=>`<div class=item><b>${n.title}</b><br><small>${n.category}</small></div>`).join(""):"अभी local news नहीं है।"}$("#f").onsubmit=e=>{e.preventDefault();a.unshift({title:t.value,category:c.value,image:i.value,summary:s.value,content:x.value});localStorage.setItem("tdi_local",JSON.stringify(a));e.target.reset();r();alert("News local browser में save हो गई।")};r();
+</script></body></html>
