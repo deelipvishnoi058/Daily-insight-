@@ -6,6 +6,30 @@ let remoteNews=null;
 async function getRemoteNews(){try{const r=await fetch("news.json?"+Date.now()); if(r.ok) remoteNews=await r.json()}catch{} return remoteNews}
 function getNews(){try{return remoteNews||JSON.parse(localStorage.getItem("tdi_news"))||demoNews}catch{return remoteNews||demoNews}}
 function esc(x){return String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+
+function renderNews(){
+ const q=($("#search")?.value||"").toLowerCase();
+ const cat=$("#category")?.value||"all";
+ const items=getNews().filter(n=>
+   (cat==="all"||n.category===cat) &&
+   (`${n.title} ${n.summary}`.toLowerCase().includes(q))
+ );
+ const count=$("#count"); if(count) count.textContent=`${items.length} stories`;
+ const empty=$("#empty"); if(empty) empty.classList.toggle("hidden",!!items.length);
+ const grid=$("#newsGrid");
+ if(!grid) return;
+ grid.innerHTML=items.map(n=>`
+ <article class="card">
+   ${n.image?`<img src="${esc(n.image)}" alt="${esc(n.title)}">`:""}
+   <div class="card-body">
+     <span class="tag">${esc(n.category)}</span>
+     <h3>${esc(n.title)}</h3>
+     <p>${esc(n.summary)}</p>
+     <a class="read" href="article.html?id=${encodeURIComponent(n.id)}">Read story →</a>
+   </div>
+ </article>`).join("");
+}
+
 function article(){
  const id=new URLSearchParams(location.search).get("id"), n=getNews().find(x=>String(x.id)===String(id));
  if(!n)return;
